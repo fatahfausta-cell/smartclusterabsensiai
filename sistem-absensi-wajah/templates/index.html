@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Absensi Wajah — Kehadiran Pegawai</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563eb'/%3E%3Ccircle cx='16' cy='12' r='5' fill='%23fff'/%3E%3Cpath d='M6 27c1.8-5 5.6-7.5 10-7.5S24.2 22 26 27' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </span>
+        <span>Absensi Wajah</span>
+        <small>Sistem Kehadiran</small>
+      </div>
+      <div class="topbar-kanan">
+        <div class="topbar-jam">
+          <b id="jam">--:--:--</b>
+          <span id="tgl">&nbsp;</span>
+        </div>
+        <a class="btn btn-putih btn-kecil" href="/login">Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container kiosk-main">
+    <div class="kiosk-card">
+      <div class="kiosk-grid">
+        <div class="camera-wrap">
+          <div class="video-box" id="videoBox">
+            <video id="video" autoplay playsinline muted></video>
+            <div class="face-guide" aria-hidden="true"></div>
+          </div>
+          <div class="cam-badge" id="camBadge">
+            <span class="titik" aria-hidden="true"></span>
+            <span class="teks">Menyiapkan kamera…</span>
+          </div>
+        </div>
+        <div class="status-area" id="statusArea"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kiosk-footer">
+    Verifikasi wajah asli (anti-foto) &middot; Data peserta dikelola oleh administrator
+  </footer>
+
+  <script src="/static/js/attendance.js?v=6"></script>
+</body>
+</html>
